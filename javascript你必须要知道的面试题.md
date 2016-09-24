@@ -286,7 +286,7 @@ slice 的用法请参考：slice
 	console.log('A' - 'B');  // NaN
 这张图是运算转换的规则
 
-![](http://C:\Users\Administrator\Desktop\15_3.png)
+![](www.takozhang.cn/img/15_3.png)
 
 3、运算符转换
 
