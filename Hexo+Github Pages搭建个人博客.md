@@ -44,7 +44,7 @@ hexo deploy (hexo d)
 	$ hexo s -g #生成预览
 
 现在我们打开[http://localhost:4000](http://localhost:4000)已经可以看到一篇内置的blog了。
-![](http://da)
+![](https://raw.githubusercontent.com/dushao103500/You-must-know/master/images/blogDemo.png)
 
 **目前我安装所用的本地环境如下：(可以通过hexo -v查看)**
 
