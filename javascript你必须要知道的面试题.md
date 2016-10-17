@@ -1,4 +1,10 @@
-**1、使用 typeof bar === "object" 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？**
+---
+title: Javascript你必须要知道的面试题
+date: 2012-11-01 20:10:33
+categories: Javascript编程知识
+---
+
+### 1、使用 typeof bar === "object" 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？ ###
 
 使用 typeof 的弊端是显而易见的(这种弊端同使用 instanceof)：
 
@@ -21,7 +27,7 @@
 
 而 [] === false 是返回 false 的。
 
-**2、下面的代码会在 console 输出神马？为什么？**
+### 2、下面的代码会在 console 输出神马？为什么？ ###
 
 	(function(){
 	  var a = b = 3;
@@ -39,7 +45,7 @@
 	var a = b;
 所以 b 成了全局变量，而 a 是自执行函数的一个局部变量。
 
-**3、下面的代码会在 console 输出神马？为什么？**
+### 3、下面的代码会在 console 输出神马？为什么？ ###
 
 	var myObject = {
 	    foo: "bar",
@@ -62,7 +68,7 @@
 	}(self));
 如果对闭包不熟悉，可以戳此：从作用域链谈闭包
 
-4、将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？
+### 4、将 JavaScript 代码包含在一个函数块中有神马意思呢？为什么要这么做？ ###
 
 换句话说，为什么要用立即执行函数表达式（Immediately-Invoked Function Expression）。
 
@@ -87,14 +93,14 @@ IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输
 	(function($) { 
 	        //代码
 	 } )(jQuery);
-**5、在严格模式('use strict')下进行 JavaScript 开发有神马好处？**
+### 5、在严格模式('use strict')下进行 JavaScript 开发有神马好处？ ###
 
 消除Javascript语法的一些不合理、不严谨之处，减少一些怪异行为;
 消除代码运行的一些不安全之处，保证代码运行的安全；
 提高编译器效率，增加运行速度；
 为未来新版本的Javascript做好铺垫。
 
-**6、下面两个函数的返回值是一样的吗？为什么？**
+### 6、下面两个函数的返回值是一样的吗？为什么？ ###
 	
 	function foo1()
 	{
@@ -125,7 +131,7 @@ IIFE 有两个比较经典的使用场景，一是类似于在循环中定时输
 	}
 所以第二个函数是返回 undefined。
 
-7、神马是 NaN，它的类型是神马？怎么测试一个值是否等于 NaN?
+### 7、神马是 NaN，它的类型是神马？怎么测试一个值是否等于 NaN? ###
 
 NaN 是 Not a Number 的缩写，JavaScript 的一种特殊数值，其类型是 Number，可以通过 isNaN(param) 来判断一个值是否是 NaN：
 
@@ -140,7 +146,7 @@ NaN 是 Not a Number 的缩写，JavaScript 的一种特殊数值，其类型是
 	console.log(Object.prototype.toString.call(NaN)); //[object Number]
 ES6 中，isNaN() 成为了 Number 的静态方法：Number.isNaN().
 
-**8、解释一下下面代码的输出**
+### 8、解释一下下面代码的输出 ###
 
 	console.log(0.1 + 0.2);   //0.30000000000000004
 	console.log(0.1 + 0.2 == 0.3);  //false
@@ -172,7 +178,7 @@ JavaScript 中的 number 类型就是浮点型，JavaScript 中的浮点数采�
 	    return x.toPrecision() + y.toPrecision()
 	}
 	console.log(add(0.1,0.2));  //"0.10.2"
-**9、实现函数 isInteger(x) 来判断 x 是否是整数**
+### 9、实现函数 isInteger(x) 来判断 x 是否是整数 ###
 
 可以将 x 转换成10进制，判断和本身是不是相等即可：
 
@@ -188,7 +194,7 @@ ES6 对数值进行了扩展，提供了静态方法 isInteger() 来判断参数
 	Number.isInteger(true) // false
 JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两个端点），超过这个范围，无法精确表示这个值。ES6 引入了Number.MAX_SAFE_INTEGER 和 Number.MIN_SAFE_INTEGER这两个常量，用来表示这个范围的上下限，并提供了 Number.isSafeInteger() 来判断整数是否是安全型整数。
 
-**10、在下面的代码中，数字 1-4 会以什么顺序输出？为什么会这样输出？**
+### 10、在下面的代码中，数字 1-4 会以什么顺序输出？为什么会这样输出？ ###
 
 	(function() {
 	    console.log(1); 
@@ -198,7 +204,7 @@ JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两
 	})();
 这个就不多解释了，主要是 JavaScript 的定时机制和时间循环，不要忘了，JavaScript 是单线程的。详解可以参考 从setTimeout谈JavaScript运行机制。
 
-**11、写一个少于 80 字符的函数，判断一个字符串是不是回文字符串**
+### 11、写一个少于 80 字符的函数，判断一个字符串是不是回文字符串 ###
 	
 	function isPalindrome(str) {
 	    str = str.replace(/\W/g, '').toLowerCase();
@@ -206,7 +212,7 @@ JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两
 	}
 这个题我在 codewars 上碰到过，并收录了一些不错的解决方式，可以戳这里：Palindrome For Your Dome
 
-**12、写一个按照下面方式调用都能正常工作的 sum 方法**
+### 12、写一个按照下面方式调用都能正常工作的 sum 方法 ###
 
 	console.log(sum(2,3));   // Outputs 5
 	console.log(sum(2)(3));  // Outputs 5
@@ -223,7 +229,7 @@ JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两
 	  }
 	
 	}
-**13、根据下面的代码片段回答后面的问题**
+### 13、根据下面的代码片段回答后面的问题 ###
 
 	for (var i = 0; i < 5; i++) {
 	  var btn = document.createElement('button');
@@ -237,7 +243,7 @@ JavaScript能够准确表示的整数范围在 -2^53 到 2^53 之间（不含两
 答：1、点击5个按钮中的任意一个，都是输出5
 2、参考 IIFE。
 
-**14、下面的代码会输出什么？为什么？**
+### 14、下面的代码会输出什么？为什么？ ###
 
 	var arr1 = "john".split(''); j o h n
 	var arr2 = arr1.reverse(); n h o j
@@ -256,7 +262,7 @@ reverse() 会改变数组本身，并返回原数组的引用。
 
 slice 的用法请参考：slice
 
-**15、下面的代码会输出什么？为什么？**
+### 15、下面的代码会输出什么？为什么？ ###
 
 	console.log(1 +  "2" + "2");
 	console.log(1 +  +"2" + "2");
@@ -286,11 +292,11 @@ slice 的用法请参考：slice
 	console.log('A' - 'B');  // NaN
 这张图是运算转换的规则
 
-![](http://oe51jhwvd.bkt.clouddn.com/15_3.png)
+![](https://raw.githubusercontent.com/dushao103500/You-must-know/master/images/15_3.png)
 
 3、运算符转换
 
-**16、如果 list 很大，下面的这段递归代码会造成堆栈溢出。如果在不改变递归模式的前提下修善这段代码？**
+### 16、如果 list 很大，下面的这段递归代码会造成堆栈溢出。如果在不改变递归模式的前提下修善这段代码？ ###
 
 	var list = readHugeList();
 	
@@ -316,18 +322,18 @@ slice 的用法请参考：slice
 	};
 解决方式的原理请参考第10题。
 
-**17、什么是闭包？举例说明**
+### 17、什么是闭包？举例说明 ###
 
 可以参考此篇：[从作用域链谈闭包](http://www.liuhaihua.cn/archives/152190.html)
 
-18、下面的代码会输出什么？为啥？
+### 18、下面的代码会输出什么？为啥？ ###
 
 	for (var i = 0; i < 5; i++) {
 	  setTimeout(function() { console.log(i); }, i * 1000 );
 	}
 请往前面翻，参考第4题，解决方式已经在上面了
 
-19、解释下列代码的输出
+### 19、解释下列代码的输出 ###
 
 	console.log("0 || 1 = "+(0 || 1));
 	console.log("1 || 2 = "+(1 || 2));
@@ -366,13 +372,13 @@ slice 的用法请参考：slice
 所以在 if 中，[] 和 {} 都表现为 true：
 
 
-**20、解释下面代码的输出**
+### 20、解释下面代码的输出 ###
 
 	console.log(false == '0')
 	console.log(false === '0')
 请参考前面第14题运算符转换规则的图。
 
-**21、解释下面代码的输出**
+### 21、解释下面代码的输出 ###
 
 	var a={},
 	    b={key:'b'},
@@ -385,7 +391,7 @@ slice 的用法请参考：slice
 输出是 456，参考原文的解释：
 
 > The reason for this is as follows: When setting an object property, JavaScript will implicitly stringify the parameter value. In this case, since b and c are both objects, they will both be converted to "[object Object]". As a result, a[b] anda[c] are both equivalent to a["[object Object]"] and can be used interchangeably. Therefore, setting or referencing a[c] is precisely the same as setting or referencing a[b].
-**22、解释下面代码的输出**
+### 22、解释下面代码的输出 ###
 
 	console.log((function f(n){return ((n > 1) ? n * f(n-1) : n)})(10));
 
@@ -393,7 +399,7 @@ slice 的用法请参考：slice
 
 递归
 
-**23、解释下面代码的输出**
+### 23、解释下面代码的输出 ###
 
 	(function(x) {
 	    return (function(y) {
@@ -402,7 +408,7 @@ slice 的用法请参考：slice
 	})(1);
 输出1，闭包能够访问外部作用域的变量或参数。
 
-**24、解释下面代码的输出，并修复存在的问题**
+### 24、解释下面代码的输出，并修复存在的问题 ###
 
 	var hero = {
 	    _name: 'John Doe',
@@ -424,7 +430,7 @@ stoleSecretIdentity 的上下文是全局环境，所以第一个输出 undefine
 
 第二个是调用对象的方法，输出 John Doe。
 
-**25、给你一个 DOM 元素，创建一个能访问该元素所有子元素的函数，并且要将每个子元素传递给指定的回调函数。**
+### 25、给你一个 DOM 元素，创建一个能访问该元素所有子元素的函数，并且要将每个子元素传递给指定的回调函数。 ###
 
 函数接受两个参数：
 
