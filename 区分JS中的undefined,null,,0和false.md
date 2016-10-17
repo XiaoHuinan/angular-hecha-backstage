@@ -1,8 +1,4 @@
----
-title: 区分JS中的undefined,null,"",0和false
-categories: Javascript编程知识
-date: 2014-09-17 15:10:15
----
+
 
 今天有同事问我一个Js 问题，if (0 == '') 是true  很不理解，单独做了一下测试，记录于此。
 

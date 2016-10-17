@@ -1,8 +1,4 @@
----
-title: Javascript你必须要知道的面试题
-date: 2012-11-01 20:10:33
-categories: Javascript编程知识
----
+
 
 ### 1、使用 typeof bar === "object" 判断 bar 是不是一个对象有神马潜在的弊端？如何避免这种弊端？ ###
 

@@ -1,8 +1,4 @@
----
-title: 判断js中的数据类型的几种方法
-categories: Javascript编程知识
-date: 2014-09-11 10:11:05
----
+
 
 判断js中的数据类型有一下几种方法：typeof、instanceof、 constructor、 prototype、 $.type()/jquery.type(),接下来主要比较一下这几种方法的异同。
 
