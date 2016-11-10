@@ -1,4 +1,4 @@
-###Angular+Bootstrap项目：和茶网后台管理系统(www.takozhang.cn)）
+###Angular+Bootstrap项目：和茶网后台管理系统(http://www.takozhang.cn/angular-hecha-backstage)）
 
 ### 项目构建： ###
 项目由angular+bootstrap搭建，主要使用的是angular,bootstrap,angular-ui-router。
