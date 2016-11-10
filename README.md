@@ -1,22 +1,27 @@
-###此处主要展示一些我在日常所收集的面试题，来源于本人的博客（[杜少博客](www.takozhang.cn)）
+###Angular+Bootstrap项目：和茶网后台管理系统(www.takozhang.cn)）
 
-### 主要收集： ###
+### 项目构建： ###
+项目由angular+bootstrap搭建，主要使用的是angular,bootstrap,angular-ui-router。
 
-#### 1、[css清除浮动大全的8种方法](https://github.com/dushao103500/Interview-questions/blob/master/CSS清除浮动大全的8种方法.md) ####
+###项目环境
+由于项目中使用到了ajax，切忌直接打开文件，请先开一个服务，再跑代码。项目的API接口使用的node+express+mongodb，如果想开发API，可先看我的另一篇[开发后台接口的文章](https://github.com/dushao103500/angular-project-api)
 
-#### 2、[css中单位px、pt、em和rem的区别](https://github.com/dushao103500/Interview-questions/blob/master/css中单位px、pt、em和rem的区别.md) ####
+###项目功能
+**1. 账号登录**
+	
+只有管理员身份才能登录，所以偷偷透露一个账号:dushao,密码是103500
+![](http://oe51jhwvd.bkt.clouddn.com/angular-login.png)
 
-#### 3、[javascript你必须要知道的面试题](https://github.com/dushao103500/Interview-questions/blob/master/javascript你必须要知道的面试题.md) ####
+**2. 动态列表**
 
-#### 4、[判断js中的数据类型的几种方法](https://github.com/dushao103500/Interview-questions/blob/master/判断js中的数据类型的几种方法.md) ####
+信息列表是动态数据，同时也具有隐入和淡出的功能，如图：![](http://oe51jhwvd.bkt.clouddn.com/angular-list.png)
 
-#### 5、[前端必须要了解的面试题](https://github.com/dushao103500/Interview-questions/blob/master/前端必须要了解的面试题.md) ####
+**3. 商品信息管理**
 
-#### 6、[区分JS中的undefined,null,,0和false](https://github.com/dushao103500/Interview-questions/blob/master/区分JS中的undefined,null,,0和false.md) ####
+商品信息管理主要是增删改查，增加商品是会弹出添加页面完成添加功能，如图：![](http://oe51jhwvd.bkt.clouddn.com/angular-add.png),删除功能主要是对选中的商品进行删除操作，支持全选，如图：
+![](http://oe51jhwvd.bkt.clouddn.com/angular-delete.png)，商品查找功能主要是通过输入框输入关键字进行查找，同时商品信息会即使同步，如图：![](http://oe51jhwvd.bkt.clouddn.com/angular-search.png)，商品修改功能通过点击编辑按钮，弹出当前点击商品的信息，然后进行修改，如图：![](http://oe51jhwvd.bkt.clouddn.com/angular-modify.png)
 
-#### 7、[让div水平垂直居中的几种方法](https://github.com/dushao103500/Interview-questions/blob/master/让div水平垂直居中的几种方法.md) ####
+**4. 用户信息管理**
+用户信息管理基本同商品信息管理相同，就不详细介绍，直接上图：![](http://oe51jhwvd.bkt.clouddn.com/angular-user.png)
 
-#### 8、[置换和非置换元素](https://github.com/dushao103500/Interview-questions/blob/master/置换和非置换元素.md) ####
-
-
-**以上只是部分题目，如果想了解更多，请转至[杜少博客](www.takozhang.cn)**
+####项目在很短时间内赶出来，略显粗糙，代码看起来非常冗余无结构，但思路还是比较清晰，希望大家多多担待。
