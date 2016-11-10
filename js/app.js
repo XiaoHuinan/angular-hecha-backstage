@@ -8,23 +8,23 @@ angularStore.config(['$stateProvider', function($stateProvider){
   $stateProvider
     .state('login', {
       url: '/',
-      templateUrl: '../partials/login.html',
+      templateUrl: '../../partials/login.html',
       controller: 'loginController'//,
       //controllerAs: 'homeCtrl'
     })
     .state('home',{
       url: '/home',
-      templateUrl: '../partials/home.html',
+      templateUrl: '../../partials/home.html',
       controller: 'homeController'
     })
     .state('home.main',{
       url: '/main',
-      templateUrl: '../partials/main.html',
+      templateUrl: '../../partials/main.html',
       controller: 'mainController'
     })
     .state('home.user',{
       url: '/user',
-      templateUrl: '../partials/user.html',
+      templateUrl: '../../partials/user.html',
       controller: 'userController'
     })
 
